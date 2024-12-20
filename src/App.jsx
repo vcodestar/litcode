@@ -21,7 +21,7 @@ import MySQLWriteUp from './languages_menus/writeups/MySQLWriteUp.jsx';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/litcode'>
       <NavigationBar />
       <div className="container" style={{ marginTop: '60px' }}>
         <Routes>
