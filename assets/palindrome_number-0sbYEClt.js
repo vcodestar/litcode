@@ -1,4 +1,4 @@
-import{j as e}from"./index-Dz8PbrvL.js";import{P as t,A as o,C as s,S as c}from"./Summary-Drn655bn.js";function m(){const n="A palindrome number is an integer that reads the same backward as forward. For instance, 121 is a palindrome because reversing it yields the same number, whereas 123 is not because its reverse is 321. The task is to determine whether a given integer x is a palindrome without converting the number to a string.",l=`class Solution:
+import{j as e}from"./index-DxwTce4T.js";import{P as t,A as o,C as s,S as c}from"./Summary-Cl7lBqgi.js";function m(){const n="A palindrome number is an integer that reads the same backward as forward. For instance, 121 is a palindrome because reversing it yields the same number, whereas 123 is not because its reverse is 321. The task is to determine whether a given integer x is a palindrome without converting the number to a string.",l=`class Solution:
     def isPalindrome(self, x: int) -> bool:`,r=`        if x < 0:
             return False
         if x != 0 and x % 10 == 0:

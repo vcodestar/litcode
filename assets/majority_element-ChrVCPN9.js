@@ -1,4 +1,4 @@
-import{j as e}from"./index-Dz8PbrvL.js";import{P as l,A as o,C as t,S as c}from"./Summary-Drn655bn.js";function d(){const s='The goal of the function is to find the "majority element" in a given array nums. A majority element is defined as an element that appears more than ⌊n/2⌋ times, where n is the size of the array.',a="int majorityElement(int* nums, int numsSize) {",i=`  //initilization
+import{j as e}from"./index-DxwTce4T.js";import{P as l,A as o,C as t,S as c}from"./Summary-Cl7lBqgi.js";function d(){const s='The goal of the function is to find the "majority element" in a given array nums. A majority element is defined as an element that appears more than ⌊n/2⌋ times, where n is the size of the array.',a="int majorityElement(int* nums, int numsSize) {",i=`  //initilization
   int i; //used for loop
   int tmpMaj = nums[0];
   int counter = 1;`,n=`  // loop through nums array
