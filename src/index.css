@@ -1,0 +1,504 @@
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+  width: 100%;
+  max-width: 110vw; /* Prevents the container from exceeding the viewport width */
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+body.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+
+#vcodestar-link {
+  text-decoration: none;
+}
+
+/***************************** HOME *******************************/
+.litcode-home-logo {
+  margin:4vh 0vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hive, .reverse-hive {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reverse-hive {
+  flex-wrap: wrap-reverse;
+}
+
+.hexagon {
+  height: 150px; /* adjust to control the size  */
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+  background: #3B8686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon-empty {
+  --b: 10px; /* adjust to control the border  */
+  height: 150px; /* adjust to control the size  */
+  aspect-ratio: cos(30deg);
+  clip-path: 
+    polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
+    50% var(--b),
+    calc(100% - var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    calc(100% - var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    50% calc(100% - var(--b)),
+    calc(var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+    calc(var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+    50% var(--b));
+  background: #3B8686;
+}
+
+.hexagon i {
+  font-size: 2.4rem;
+}
+
+.app-container.dark .hexagon i {
+  color: #242424;
+}
+
+.app-container.light .hexagon i {
+  color: white;
+}
+/***************************** END HOME *******************************/
+
+/***************************** CATEGORIES *******************************/
+
+.app-container.dark .card-wrapper {
+  background-color: white;
+}
+
+.app-container.light .card-wrapper {
+  background-color: #242424;
+}
+
+.app-container.dark .card-container {
+  color: #242424;
+}
+
+.app-container.light .card-container {
+  color: white;
+}
+
+/* these two work together */
+.app-container.dark .card:hover {
+  background-color: #242424 !important;
+}
+
+.app-container.dark .card:hover .card-container {
+  background-color: #242424 !important;
+  color: white !important;
+}
+/*********************************/
+
+/* these two work together */
+.app-container.light .card:hover {
+  background-color: white !important;
+}
+
+.app-container.light .card:hover .card-container {
+  background-color: white !important;
+  color: #242424 !important;
+}
+/*********************************/
+
+.card-wrapper {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 2rem; 
+  justify-content: center; 
+  align-items: flex-start; 
+  margin: 0 auto; 
+  padding: 4vh 2vw; 
+  margin: 5vh 0vw;
+}
+
+.app-container.card {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1; 
+  flex-basis: 20vw; 
+  max-width: 25vw; 
+  min-width: 200px; 
+  height: 40vh; 
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+
+/***************************** END CATEGORIES *******************************/
+
+/***************************** CATEGORIES MENU ******************************/
+
+.category-menu {
+  padding: 4vh 3vw;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+
+.category-menu-item {
+  text-decoration: none;
+  width: 100%;
+  padding: 3vh 2vw;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.app-container.dark .category-menu-item {
+  border: 1px solid white;
+  color: white;
+}
+
+.app-container.dark .category-menu-item:hover {
+  background-color: white;
+  color: #242424;
+}
+
+.app-container.light .category-menu-item {
+  border: 1px solid #242424;
+  color: #242424;
+}
+
+.app-container.light .category-menu-item:hover {
+  background-color: #242424;
+  color: white;
+}
+
+/***************************** END CATEGORIES MENU ******************************/
+
+/***************************** ABOUT ME *******************************/
+
+.app-container.light .about-container {
+  border: 1px solid #242424;
+}
+
+.app-container.dark .about-container {
+  border: 1px solid white;
+}
+
+.about-container {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.8;
+  margin-bottom: 10vh;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/***************************** END ABOUT ME *******************************/
+
+
+
+/***************************** CONTACT ********************************/
+
+.app-container.light #contact-container {
+  border: 1px solid #242424;
+}
+
+.app-container.dark #contact-container {
+  border: 1px solid white;
+}
+
+#contact-header {
+  margin-bottom: 3vh;
+}
+
+#contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4vh 6vh;
+  margin-bottom: 10vh;
+}
+
+#contact-container h1 {
+  margin-bottom: 4vh;
+}
+
+#contact-container a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1vh;
+  margin-bottom: 5vh;
+  border-radius: 5px;
+  gap: 0.5rem;
+}
+
+#contact-container i {
+  font-size: 1.2rem;
+}
+#contact-container h4 {
+  margin: 0; 
+  font-size: 1.2rem; 
+}
+
+#contact-container a {
+  background-color: transparent !important;
+}
+
+.light #contact-container a {
+  background-color: #242424;
+  color: white;
+}
+
+.light #contact-container a {
+  color: #242424;
+  border: 1px solid #242424;
+}
+
+.light #contact-container a:hover {
+  background-color: #242424 !important;
+  color: white;
+}
+
+.dark #contact-container a {
+  border: 1px solid white;
+  color: white;
+}
+
+.dark #contact-container a:hover {
+  color: #242424;
+  background-color: white !important;
+}
+
+/***************************** END CONTACT ********************************/
+
+
+/**************************** PYTHON **************************************/
+.language-menu-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+  padding: 2vh;
+}
+/**************************** END PYTHON **************************************/
+
+
+.code-container {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid green;
+}
+
+
+/*************************** WRITE UP ****************************************/
+.writeup-wrapper {
+  overflow: hidden;
+  max-width: 70vw;
+  margin: 3vh 0vw;
+  padding: 2vh 2vw;
+}
+.writeup-p {
+  text-align: left;
+}
+
+.writeup-colored-bg {
+  padding: 0.2vh 0.5vw;
+  border-radius: 5px;
+  margin-top: 10vh;
+  background-color: #1f1e1e;
+  color: white;
+}
+
+.summary-header {
+  text-align: left;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1vh;
+}
+
+/************************* PROBLEM DEFINITION ******************************/
+.problem-definition-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.definition-header {
+  text-align: left;
+  padding: 1vh 0vw;
+  border-bottom: 1px solid grey;
+}
+
+.definition-p {
+  text-align: left;
+}
+
+.algorithm-header {
+  text-align: left;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid grey;
+}
+
+/************************* END PROBLEM DEFINITION ******************************/
+
+
+/*************************** END WRITE UP ****************************************/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@media (max-width: 768px) {
+  .hexagon {
+    height: 80px; /* Smaller size */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .hexagon {
+    height: 60px; /* Even smaller size */
+  }
+}
+
+@media (max-width: 768px) {
+  .hexagon-empty {
+    height: 150px; /* Reduce size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon-empty {
+    height: 100px; /* Further reduce size for very small screens */
+  }
+}
+
+
+#xorTable {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+#xorTable th, #xorTable td {
+  padding: 0.5vh;
+  text-align: center;
+}
+
+.light #xorTable th, .light #xorTable td {
+  border: 1px solid #000;
+}
+
+.dark #xorTable th, .dark #xorTable td {
+  border: 1px solid white;
+}
